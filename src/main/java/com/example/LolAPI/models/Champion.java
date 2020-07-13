@@ -38,16 +38,16 @@ public class Champion {
     private int mana;
 
     @Column(name = "Armour")
-    private int armour;
+    private double armour;
 
     @Column(name = "Attack Speed")
-    private int attackSpeed;
+    private double attackSpeed;
 
     @Column(name = "Attack Damage")
-    private int attackDamage;
+    private double attackDamage;
 
     @Column(name = "Health")
-    private int health;
+    private double health;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,7 +62,7 @@ public class Champion {
     )
     private List<GameMode> gameModes;
 
-    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
+    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, double armour, double attackSpeed, double attackDamage, double health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -153,35 +153,35 @@ public class Champion {
         this.mana = mana;
     }
 
-    public int getArmour() {
+    public double getArmour() {
         return armour;
     }
 
-    public void setArmour(int armour) {
+    public void setArmour(double armour) {
         this.armour = armour;
     }
 
-    public int getAttackSpeed() {
+    public double getAttackSpeed() {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(int attackSpeed) {
+    public void setAttackSpeed(double attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
-    public int getAttackDamage() {
+    public double getAttackDamage() {
         return attackDamage;
     }
 
-    public void setAttackDamage(int attackDamage) {
+    public void setAttackDamage(double attackDamage) {
         this.attackDamage = attackDamage;
     }
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
     }
 }
