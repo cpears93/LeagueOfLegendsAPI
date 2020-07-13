@@ -1,4 +1,4 @@
 package com.example.LolAPI.models;
 
-public class GameModeController {
+public class GameMode {
 }
