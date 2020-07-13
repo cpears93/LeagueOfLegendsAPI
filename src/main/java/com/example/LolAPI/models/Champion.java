@@ -1,8 +1,10 @@
 package com.example.LolAPI.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "champions")
@@ -38,8 +40,12 @@ public class Champion {
 
     @JsonIgnoreProperties(value="characters")
     @ManyToMany
-    @JoinColumn(name="gameMode_id", nullable = false)
-    private GameMode gameMode;
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            joinColumns = {@JoinColumn(name = "champion_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "gameMode_id", nullable = false, updatable = false)}
+    )
+    private List<GameMode> gameModes;
 
     public Champion(String name, String epithet, String roles, String abilities, String mana, String armour, String attackSpeed, String attackDamage) {
         this.name = name;
