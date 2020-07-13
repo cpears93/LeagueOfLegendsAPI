@@ -19,6 +19,9 @@ public class Champion {
     @Column(name = "Roles")
     private String roles;
 
+    @Column(name = "Passive Ability")
+    private String passiveAbility;
+
     @Column(name = "AbilityQ")
     private String abilityq;
 
@@ -59,10 +62,11 @@ public class Champion {
     )
     private List<GameMode> gameModes;
 
-    public Champion(String name, String epithet, String roles, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
+    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
+        this.passiveAbility = passiveAbility;
         this.abilityq = abilityq;
         this.abilityw = abilityw;
         this.abilitye = abilitye;
@@ -99,6 +103,14 @@ public class Champion {
 
     public void setRoles(String roles) {
         this.roles = roles;
+    }
+
+    public String getPassiveAbility() {
+        return passiveAbility;
+    }
+
+    public void setPassiveAbility(String passiveAbility) {
+        this.passiveAbility = passiveAbility;
     }
 
     public String getAbilityq() {
