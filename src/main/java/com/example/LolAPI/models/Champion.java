@@ -19,20 +19,32 @@ public class Champion {
     @Column(name = "Roles")
     private String roles;
 
-    @Column(name = "Abilities")
-    private String abilities;
+    @Column(name = "AbilityQ")
+    private String abilityq;
+
+    @Column(name = "AbilityW")
+    private String abilityw;
+
+    @Column(name = "AbilityE")
+    private String abilitye;
+
+    @Column(name = "AbilityR")
+    private String abilityr;
 
     @Column(name = "Mana")
-    private String mana;
+    private int mana;
 
     @Column(name = "Armour")
-    private String armour;
+    private int armour;
 
     @Column(name = "Attack Speed")
-    private String attackSpeed;
+    private int attackSpeed;
 
     @Column(name = "Attack Damage")
-    private String attackDamage;
+    private int attackDamage;
+
+    @Column(name = "Health")
+    private int health;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,15 +59,19 @@ public class Champion {
     )
     private List<GameMode> gameModes;
 
-    public Champion(String name, String epithet, String roles, String abilities, String mana, String armour, String attackSpeed, String attackDamage) {
+    public Champion(String name, String epithet, String roles, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
-        this.abilities = abilities;
+        this.abilityq = abilityq;
+        this.abilityw = abilityw;
+        this.abilitye = abilitye;
+        this.abilityr = abilityr;
         this.mana = mana;
         this.armour = armour;
         this.attackSpeed = attackSpeed;
         this.attackDamage = attackDamage;
+        this.health = health;
     }
 
     public Champion() {
@@ -85,43 +101,75 @@ public class Champion {
         this.roles = roles;
     }
 
-    public String getAbilities() {
-        return abilities;
+    public String getAbilityq() {
+        return abilityq;
     }
 
-    public void setAbilities(String abilities) {
-        this.abilities = abilities;
+    public void setAbilityq(String abilityq) {
+        this.abilityq = abilityq;
     }
 
-    public String getMana() {
+    public String getAbilityw() {
+        return abilityw;
+    }
+
+    public void setAbilityw(String abilityw) {
+        this.abilityw = abilityw;
+    }
+
+    public String getAbilitye() {
+        return abilitye;
+    }
+
+    public void setAbilitye(String abilitye) {
+        this.abilitye = abilitye;
+    }
+
+    public String getAbilityr() {
+        return abilityr;
+    }
+
+    public void setAbilityr(String abilityr) {
+        this.abilityr = abilityr;
+    }
+
+    public int getMana() {
         return mana;
     }
 
-    public void setMana(String mana) {
+    public void setMana(int mana) {
         this.mana = mana;
     }
 
-    public String getArmour() {
+    public int getArmour() {
         return armour;
     }
 
-    public void setArmour(String armour) {
+    public void setArmour(int armour) {
         this.armour = armour;
     }
 
-    public String getAttackSpeed() {
+    public int getAttackSpeed() {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(String attackSpeed) {
+    public void setAttackSpeed(int attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
-    public String getAttackDamage() {
+    public int getAttackDamage() {
         return attackDamage;
     }
 
-    public void setAttackDamage(String attackDamage) {
+    public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }

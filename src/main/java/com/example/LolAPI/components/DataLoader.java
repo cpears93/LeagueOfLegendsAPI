@@ -1,5 +1,6 @@
 package com.example.LolAPI.components;
 
+import com.example.LolAPI.models.Champion;
 import com.example.LolAPI.repository.ChampionRepository;
 import com.example.LolAPI.repository.GameModeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args) {
+        Champion aatrox = new Champion("Aatrox", "the Darkin Blade", "Fighter/Tank", "Deathbringer Stance", 0, 24.384, 0.651, 60.376);
+        championRepository.save(aatrox);
 
+        Champion elise = new Champion("Elise", "The Spider Queen", "Fighter/Mage", "Cocoon", 324, 22.138, 0.625, 50.54);
+        championRepository.save(elise);
     }
 }
