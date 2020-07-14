@@ -9,6 +9,5 @@ import java.util.List;
 @Repository
 public interface GameModeRepository extends JpaRepository<GameMode, Long> {
 
-    List<GameMode> findByRegulartMode(String regularMode);
-    List<GameMode> findByFeaturedGameMode(String featuredGameMode);
+    List<GameMode> findByGameMode(String gameMode);
 }

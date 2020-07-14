@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -53,12 +54,12 @@ public class Champion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnoreProperties(value="characters")
+    @JsonIgnoreProperties(value="champions")
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             joinColumns = {@JoinColumn(name = "champion_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "gameMode_id", nullable = false, updatable = false)}
+            inverseJoinColumns = {@JoinColumn(name = "gamemode_id", nullable = false, updatable = false)}
     )
     private List<GameMode> gameModes;
 

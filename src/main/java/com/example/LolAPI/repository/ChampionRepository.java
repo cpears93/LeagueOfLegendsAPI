@@ -12,9 +12,14 @@ public interface ChampionRepository extends JpaRepository<Champion, Long> {
     List<Champion> findByName(String name);
     List<Champion> findByEpithet(String epithet);
     List<Champion> findByRoles(String roles);
-    List<Champion> findByAbilities(String abilities);
-    List<Champion> findByMana(String mana);
-    List<Champion> findByArmour(String armour);
-    List<Champion> findByAttackSpeed(String attackSpeed);
-    List<Champion> findByAttackDamage(String attackDamage);
+    List<Champion> findByPassiveAbility(String passiveAbility);
+    List<Champion> findByAbilityq(String abilityq);
+    List<Champion> findByAbilityw(String abilityw);
+    List<Champion> findByAbilitye(String abilitye);
+    List<Champion> findByAbilityr(String abilityr);
+    List<Champion> findByMana(int mana);
+    List<Champion> findByArmour(double armour);
+    List<Champion> findByAttackSpeed(double attackSpeed);
+    List<Champion> findByAttackDamage(double attackDamage);
+    List<Champion> findByHealth(double health);
 }

@@ -15,14 +15,14 @@ public class GameModeController {
     @Autowired
     GameModeRepository gameModeRepository;
 
-    @GetMapping(value = "/gameModes/{id}")
-    public ResponseEntity getGameMode(@PathVariable Long id){
-        return new ResponseEntity<>(gameModeRepository.findById(id), HttpStatus.OK);
-    }
-
     @GetMapping(value = "/gameModes")
     public ResponseEntity <List<GameMode>> getAllGameModes(){
         return new ResponseEntity<>(gameModeRepository.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/gameModes/{id}")
+    public ResponseEntity getGameMode(@PathVariable Long id){
+        return new ResponseEntity<>(gameModeRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/gameModes")
