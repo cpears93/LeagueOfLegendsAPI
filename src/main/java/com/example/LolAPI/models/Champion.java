@@ -7,53 +7,53 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "champions")
+@Table(name = "champion")
 public class Champion {
 
-    @Column(name = "Name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "Epithet")
+    @Column(name = "epithet")
     private String epithet;
 
-    @Column(name = "Roles")
+    @Column(name = "roles")
     private String roles;
 
-    @Column(name = "Passive Ability")
+    @Column(name = "passiveAbility")
     private String passiveAbility;
 
-    @Column(name = "AbilityQ")
+    @Column(name = "abilityQ")
     private String abilityq;
 
-    @Column(name = "AbilityW")
+    @Column(name = "abilityW")
     private String abilityw;
 
-    @Column(name = "AbilityE")
+    @Column(name = "abilityE")
     private String abilitye;
 
-    @Column(name = "AbilityR")
+    @Column(name = "abilityR")
     private String abilityr;
 
-    @Column(name = "Mana")
-    private double mana;
+    @Column(name = "mana")
+    private int mana;
 
     @Column(name = "Armour")
-    private double armour;
+    private int armour;
 
-    @Column(name = "Attack Speed")
-    private double attackSpeed;
+    @Column(name = "attackSpeed")
+    private int attackSpeed;
 
-    @Column(name = "Attack Damage")
-    private double attackDamage;
+    @Column(name = "attackDamage")
+    private int attackDamage;
 
-    @Column(name = "Health")
-    private double health;
+    @Column(name = "health")
+    private int health;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, double mana, double armour, double attackSpeed, double attackDamage, double health) {
+    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -69,7 +69,7 @@ public class Champion {
         this.health = health;
     }
 
-    public Champion() {
+    public Champion(String aatrox, String the_darkin_blade, String fighter, String deathbringer_stance, String theDarkinBlade, String infernal_chains, String umbral_dash, String world_ender, int mana, double v, double v1, double v2, double v3) {
     }
 
     public String getName() {
@@ -136,7 +136,7 @@ public class Champion {
         this.abilityr = abilityr;
     }
 
-    public double getMana() {
+    public int getMana() {
         return mana;
     }
 
@@ -144,35 +144,43 @@ public class Champion {
         this.mana = mana;
     }
 
-    public double getArmour() {
+    public int getArmour() {
         return armour;
     }
 
-    public void setArmour(double armour) {
+    public void setArmour(int armour) {
         this.armour = armour;
     }
 
-    public double getAttackSpeed() {
+    public int getAttackSpeed() {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(double attackSpeed) {
+    public void setAttackSpeed(int attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
-    public double getAttackDamage() {
+    public int getAttackDamage() {
         return attackDamage;
     }
 
-    public void setAttackDamage(double attackDamage) {
+    public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
     }
 
-    public double getHealth() {
+    public int getHealth() {
         return health;
     }
 
-    public void setHealth(double health) {
+    public void setHealth(int health) {
         this.health = health;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
