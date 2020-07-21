@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -36,7 +35,7 @@ public class Champion {
     private String abilityr;
 
     @Column(name = "Mana")
-    private int mana;
+    private double mana;
 
     @Column(name = "Armour")
     private double armour;
@@ -54,16 +53,7 @@ public class Champion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnoreProperties(value="champions")
-    @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            joinColumns = {@JoinColumn(name = "champion_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "gamemode_id", nullable = false, updatable = false)}
-    )
-    private List<GameMode> gameModes;
-
-    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, double armour, double attackSpeed, double attackDamage, double health) {
+    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, double mana, double armour, double attackSpeed, double attackDamage, double health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -146,7 +136,7 @@ public class Champion {
         this.abilityr = abilityr;
     }
 
-    public int getMana() {
+    public double getMana() {
         return mana;
     }
 
