@@ -35,25 +35,25 @@ public class Champion {
     private String abilityr;
 
     @Column(name = "mana")
-    private int mana;
+    private double mana;
 
     @Column(name = "Armour")
-    private int armour;
+    private double armour;
 
     @Column(name = "attackSpeed")
-    private int attackSpeed;
+    private double attackSpeed;
 
     @Column(name = "attackDamage")
-    private int attackDamage;
+    private double attackDamage;
 
     @Column(name = "health")
-    private int health;
+    private double health;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, int mana, int armour, int attackSpeed, int attackDamage, int health) {
+    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, double mana, double armour, double attackSpeed, double attackDamage, double health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -69,7 +69,7 @@ public class Champion {
         this.health = health;
     }
 
-    public Champion(String aatrox, String the_darkin_blade, String fighter, String deathbringer_stance, String theDarkinBlade, String infernal_chains, String umbral_dash, String world_ender, int mana, double v, double v1, double v2, double v3) {
+    public Champion() {
     }
 
     public String getName() {
@@ -136,51 +136,43 @@ public class Champion {
         this.abilityr = abilityr;
     }
 
-    public int getMana() {
+    public double getMana() {
         return mana;
     }
 
-    public void setMana(int mana) {
+    public void setMana(double mana) {
         this.mana = mana;
     }
 
-    public int getArmour() {
+    public double getArmour() {
         return armour;
     }
 
-    public void setArmour(int armour) {
+    public void setArmour(double armour) {
         this.armour = armour;
     }
 
-    public int getAttackSpeed() {
+    public double getAttackSpeed() {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(int attackSpeed) {
+    public void setAttackSpeed(double attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
-    public int getAttackDamage() {
+    public double getAttackDamage() {
         return attackDamage;
     }
 
-    public void setAttackDamage(int attackDamage) {
+    public void setAttackDamage(double attackDamage) {
         this.attackDamage = attackDamage;
     }
 
-    public int getHealth() {
+    public double getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(double health) {
         this.health = health;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 }

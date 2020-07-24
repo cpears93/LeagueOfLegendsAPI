@@ -123,7 +123,7 @@ public class DataLoader implements ApplicationRunner {
         Champion gnar = new Champion("Gnar", "The Missing Link", "Fighter", "Rage Gene", "Boomerang Throw", "Hyper", "Hop", "GNAR!", 0, 32/35.5, 0.625, 59/65, 510/610);
         championRepository.save(gnar);
 
-        Champion gragas = new Champion("Gragas", "The Rable Rouser", "Fighter", "Happy Hour", "Barrel Roll", "Drunken Rage", "Body Slam", "Explosive Cask", 400, 35, 0.625, 64, 600);
+        Champion gragas = new Champion("Gragas", "The Rable Rouser", "Fighter", "Happy Hour", "Barrel Roll", "Drunken Rage", "Body Slam", "Explosive Cask", 400, 35, (int) 0.625, 64, 600);
         championRepository.save(gragas);
 
         Champion graves = new Champion("Graves", "The Outlaw", "Marksman", "New Destiny", "End of The Line", "Smoke Screen", "Quickdraw", "Collateral Damage", 325, 33, 0.481, 68, 555);
@@ -443,6 +443,9 @@ public class DataLoader implements ApplicationRunner {
 
         Champion yorick = new Champion("Yorick", "The Shepard of Souls", "Fighter", "Shepard of Souls", "Last Rites/Awakening", "Dark Procession", "Mourning Mist", "Eulogy of the Isles", 300, 39, 0.625, 62, 580);
         championRepository.save(yorick);
+
+        Champion yone = new Champion("Yone", "The Unforgiven", "Assassin", "Shepard of Souls", "Mortal Steel", "Spirit Cleave", "Soul Unbound", "Fate Sealed", 300, 39, 0.625, 62, 580);
+        championRepository.save(yone);
 
         Champion yummi = new Champion("Yummi", "The Magical Cat", "Mage", "Bop 'n' Block", "Prowling Projectile", "You and Me!", "Zoomies", "Final Chapter", 400, 25, 0.625, 55, 480);
         championRepository.save(yummi);
