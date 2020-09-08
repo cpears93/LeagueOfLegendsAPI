@@ -324,6 +324,9 @@ public class DataLoader implements ApplicationRunner {
         Champion senna = new Champion("Senna", "The Redeemer", "Support", "Absolution", "Piercing Darkness", "Last Embrace", "Curse of the Black Mist", "Dawning Shadow", 350, 28, 0.2, 50, 520);
         championRepository.save(senna);
 
+        Champion seraphine = new Champion("Seraphine", "Placeholder", "Mage", "Placeholder", "Placeholder", "Placeholder", "Echo", "Placeholder", 350, 28, 0.2, 50, 520);
+        championRepository.save(seraphine);
+
         Champion sett = new Champion("Sett", "the Boss", "Fighter", "Pit Grit", "Knuckle Down", "Haymaker", "Facebreaker", "The Show Stopper", 0, 33, 0.625, 60, 600);
         championRepository.save(sett);
 
