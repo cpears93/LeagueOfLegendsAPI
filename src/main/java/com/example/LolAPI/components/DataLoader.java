@@ -315,6 +315,9 @@ public class DataLoader implements ApplicationRunner {
         Champion ryse = new Champion("Ryse", "The Rune Mage", "Mage", "Arcane Mastery", "Overload", "Rune Prison", "Spell Flux", "Realm Warp", 300, 22, 0.625, 58, 575);
         championRepository.save(ryse);
 
+        Champion samira = new Champion("Samira", "The Desert Rose", "Marksman", "Daredevil Impulse", "Flair", "Blade Whirl", "Wild Rush", "Inferno Trigger", 348.88, 28, 0.658, 59, 600);
+        championRepository.save(samira);
+
         Champion sejuani = new Champion("Sejuani", "Fury of the North", "Tank", "Fury of the North", "Arctic Assault", "Winter's Wrath", "Permafrost", "Glacial Prison", 400, 34, 0.625, 66, 560);
         championRepository.save(sejuani);
 
@@ -444,7 +447,7 @@ public class DataLoader implements ApplicationRunner {
         Champion yorick = new Champion("Yorick", "The Shepard of Souls", "Fighter", "Shepard of Souls", "Last Rites/Awakening", "Dark Procession", "Mourning Mist", "Eulogy of the Isles", 300, 39, 0.625, 62, 580);
         championRepository.save(yorick);
 
-        Champion yone = new Champion("Yone", "The Unforgiven", "Assassin", "Shepard of Souls", "Mortal Steel", "Spirit Cleave", "Soul Unbound", "Fate Sealed", 300, 39, 0.625, 62, 580);
+        Champion yone = new Champion("Yone", "The Unforgiven", "Assassin", "Shepard of Souls", "Mortal Steel", "Spirit Cleave", "Soul Unbound", "Fate Sealed", 0, 28, 0.625, 60, 550);
         championRepository.save(yone);
 
         Champion yummi = new Champion("Yummi", "The Magical Cat", "Mage", "Bop 'n' Block", "Prowling Projectile", "You and Me!", "Zoomies", "Final Chapter", 400, 25, 0.625, 55, 480);
