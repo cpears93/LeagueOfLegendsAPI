@@ -1,10 +1,6 @@
 package com.example.LolAPI.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "champion")
@@ -38,7 +34,7 @@ public class Champion {
     private double mana;
 
     @Column(name = "Armour")
-    private double armour;
+	public double armour;
 
     @Column(name = "attackSpeed")
     private double attackSpeed;
@@ -53,7 +49,10 @@ public class Champion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Champion(String name, String epithet, String roles, String passiveAbility, String abilityq, String abilityw, String abilitye, String abilityr, double mana, double armour, double attackSpeed, double attackDamage, double health) {
+    public Champion(final String name, final String epithet, final String roles, final String passiveAbility,
+            final String abilityq, final String abilityw, final String abilitye, final String abilityr,
+            final double mana, final double armour, final double attackSpeed, final double attackDamage,
+            final double health) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -76,7 +75,7 @@ public class Champion {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -84,7 +83,7 @@ public class Champion {
         return epithet;
     }
 
-    public void setEpithet(String epithet) {
+    public void setEpithet(final String epithet) {
         this.epithet = epithet;
     }
 
@@ -92,7 +91,7 @@ public class Champion {
         return roles;
     }
 
-    public void setRoles(String roles) {
+    public void setRoles(final String roles) {
         this.roles = roles;
     }
 
@@ -100,7 +99,7 @@ public class Champion {
         return passiveAbility;
     }
 
-    public void setPassiveAbility(String passiveAbility) {
+    public void setPassiveAbility(final String passiveAbility) {
         this.passiveAbility = passiveAbility;
     }
 
@@ -108,7 +107,7 @@ public class Champion {
         return abilityq;
     }
 
-    public void setAbilityq(String abilityq) {
+    public void setAbilityq(final String abilityq) {
         this.abilityq = abilityq;
     }
 
@@ -116,7 +115,7 @@ public class Champion {
         return abilityw;
     }
 
-    public void setAbilityw(String abilityw) {
+    public void setAbilityw(final String abilityw) {
         this.abilityw = abilityw;
     }
 
@@ -124,7 +123,7 @@ public class Champion {
         return abilitye;
     }
 
-    public void setAbilitye(String abilitye) {
+    public void setAbilitye(final String abilitye) {
         this.abilitye = abilitye;
     }
 
@@ -132,7 +131,7 @@ public class Champion {
         return abilityr;
     }
 
-    public void setAbilityr(String abilityr) {
+    public void setAbilityr(final String abilityr) {
         this.abilityr = abilityr;
     }
 
@@ -140,7 +139,7 @@ public class Champion {
         return mana;
     }
 
-    public void setMana(double mana) {
+    public void setMana(final double mana) {
         this.mana = mana;
     }
 
@@ -148,7 +147,7 @@ public class Champion {
         return armour;
     }
 
-    public void setArmour(double armour) {
+    public void setArmour(final double armour) {
         this.armour = armour;
     }
 
@@ -156,7 +155,7 @@ public class Champion {
         return attackSpeed;
     }
 
-    public void setAttackSpeed(double attackSpeed) {
+    public void setAttackSpeed(final double attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
@@ -164,7 +163,7 @@ public class Champion {
         return attackDamage;
     }
 
-    public void setAttackDamage(double attackDamage) {
+    public void setAttackDamage(final double attackDamage) {
         this.attackDamage = attackDamage;
     }
 
@@ -172,7 +171,7 @@ public class Champion {
         return health;
     }
 
-    public void setHealth(double health) {
+    public void setHealth(final double health) {
         this.health = health;
     }
 }
