@@ -2,9 +2,14 @@ package com.example.LolAPI.repository;
 
 import com.example.LolAPI.models.Champion;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ChampionRepository extends JpaRepository<Champion, Long> {
@@ -22,4 +27,8 @@ public interface ChampionRepository extends JpaRepository<Champion, Long> {
     List<Champion> findByAttackSpeed(double attackSpeed);
     List<Champion> findByAttackDamage(double attackDamage);
     List<Champion> findByHealth(double health);
+	@GetMapping(value = "/champions/{id}")
+	default ResponseEntity getChampion(final Long id) {
+	    return new ResponseEntity<>(findById(id), HttpStatus.OK);
+	}
 }

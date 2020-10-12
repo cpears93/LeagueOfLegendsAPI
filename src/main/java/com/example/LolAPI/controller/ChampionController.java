@@ -13,16 +13,12 @@ import java.util.List;
 public class ChampionController {
 
     @Autowired
+	public
     ChampionRepository championRepository;
 
     @GetMapping(value = "/champions")
     public ResponseEntity<List<Champion>> getAllChampions(){
         return new ResponseEntity<>(championRepository.findAll(), HttpStatus.OK);
-    }
-
-    @GetMapping(value = "/champions/{id}")
-    public ResponseEntity getChampion(@PathVariable final Long id) {
-        return new ResponseEntity<>(championRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/champions")
@@ -42,5 +38,9 @@ public class ChampionController {
         final Champion found = championRepository.getOne(id);
         championRepository.delete(found);
         return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    public ChampionController(ChampionRepository championRepository) {
+        this.championRepository = championRepository;
     }
 }
