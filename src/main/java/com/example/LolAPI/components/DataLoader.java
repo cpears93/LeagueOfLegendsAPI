@@ -327,7 +327,7 @@ public class DataLoader implements ApplicationRunner {
         Champion seraphine = new Champion("Seraphine", "The Starry-Eyed Songstress", "Mage", "Echo", "High Note", "Surround Sound", "Beat Drop", "Encore", 350, 28, 0.2, 50, 520);
         championRepository.save(seraphine);
 
-        Champion sett = new Champion("Sett", "the Boss", "Fighter", "Pit Grit", "Knuckle Down", "Haymaker", "Facebreaker", "The Show Stopper", 0, 33, 0.625, 60, 600);
+        Champion sett = new Champion("Sett", "The Boss", "Fighter", "Pit Grit", "Knuckle Down", "Haymaker", "Facebreaker", "The Show Stopper", 0, 33, 0.625, 60, 600);
         championRepository.save(sett);
 
         Champion shaco = new Champion("Shaco", "The Demon Jester", "Assassin", "Backstab", "Deceive", "Jack In The Box", "Two-Shiv Poison", "Hallucinate", 297.2, 30, 0.694, 63, 587);
