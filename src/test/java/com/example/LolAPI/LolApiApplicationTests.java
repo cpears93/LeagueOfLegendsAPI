@@ -92,7 +92,7 @@ class LolApiApplicationTests {
 
 		@Test
 		public void canFindChampionByAttackDamage(){
-			List<Champion> found = championRepository.findByAttackSpeed(66);
+			List<Champion> found = championRepository.findByAttackDamage(66);
 			assertEquals(66, found.get(0).getAttackSpeed());
 		}
 
