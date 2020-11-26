@@ -300,7 +300,7 @@ public class DataLoader implements ApplicationRunner {
         Champion reksai = new Champion("Rek'Sai", "The Void Burrower", "Fighter", "Fury of the Xer'Sai", "Queen's Wrath/Prey Seeker", "Burrow/Unburrow", "Furious Bite/Tunnel", "Void Rush", 0, 36, 0.667, 64, 570);
         championRepository.save(reksai);
 
-        Champion rell = new Champion("Rell", "The Iron Maiden", "Support", "Break The Mold", "Shattering Strike", "Crash Down/Mount Up", "Attract and Repel", "Magnet Storm", 0, 1, 0.2, 3, 4);
+        Champion rell = new Champion("Rell", "The Iron Maiden", "Support", "Break The Mold", "Shattering Strike", "Crash Down/Mount Up", "Attract and Repel", "Magnet Storm", 350, 35, 0.55, 55, 540);
         championRepository.save(rell);
 
         Champion renekton = new Champion("Renekton", "The Butcherer of the Sands", "Fighter", "Reign of Anger", "Cull the Meek", "Ruthless Predator", "Slice and Dice", "Dominus", 0, 35, 0.665, 69, 575);
