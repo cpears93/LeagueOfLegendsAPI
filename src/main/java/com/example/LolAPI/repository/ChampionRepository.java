@@ -17,10 +17,5 @@ public interface ChampionRepository extends JpaRepository<Champion, Long> {
     List<Champion> findByAbilityw(String abilityw);
     List<Champion> findByAbilitye(String abilitye);
     List<Champion> findByAbilityr(String abilityr);
-    List<Champion> findByMana(float mana);
-    List<Champion> findByArmour(float armour);
-    List<Champion> findByAttackSpeed(double d);
-    List<Champion> findByAttackDamage(float attackDamage);
-    List<Champion> findByHealth(float health);
 
 }
