@@ -30,29 +30,12 @@ public class Champion {
     @Column(name = "abilityR")
     private String abilityr;
 
-    @Column(name = "mana")
-    private double mana;
-
-    @Column(name = "Armour")
-	public double armour;
-
-    @Column(name = "attackSpeed")
-    private double attackSpeed;
-
-    @Column(name = "attackDamage")
-    private double attackDamage;
-
-    @Column(name = "health")
-    private double health;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public Champion(final String name, final String epithet, final String roles, final String passiveAbility,
-            final String abilityq, final String abilityw, final String abilitye, final String abilityr,
-            final double mana, final double armour, final double attackSpeed, final double attackDamage,
-            final double health) {
+            final String abilityq, final String abilityw, final String abilitye, final String abilityr) {
         this.name = name;
         this.epithet = epithet;
         this.roles = roles;
@@ -61,11 +44,6 @@ public class Champion {
         this.abilityw = abilityw;
         this.abilitye = abilitye;
         this.abilityr = abilityr;
-        this.mana = mana;
-        this.armour = armour;
-        this.attackSpeed = attackSpeed;
-        this.attackDamage = attackDamage;
-        this.health = health;
     }
 
     public Champion() {
@@ -133,45 +111,5 @@ public class Champion {
 
     public void setAbilityr(final String abilityr) {
         this.abilityr = abilityr;
-    }
-
-    public double getMana() {
-        return mana;
-    }
-
-    public void setMana(final double mana) {
-        this.mana = mana;
-    }
-
-    public double getArmour() {
-        return armour;
-    }
-
-    public void setArmour(final double armour) {
-        this.armour = armour;
-    }
-
-    public double getAttackSpeed() {
-        return attackSpeed;
-    }
-
-    public void setAttackSpeed(final double attackSpeed) {
-        this.attackSpeed = attackSpeed;
-    }
-
-    public double getAttackDamage() {
-        return attackDamage;
-    }
-
-    public void setAttackDamage(final double attackDamage) {
-        this.attackDamage = attackDamage;
-    }
-
-    public double getHealth() {
-        return health;
-    }
-
-    public void setHealth(final double health) {
-        this.health = health;
     }
 }

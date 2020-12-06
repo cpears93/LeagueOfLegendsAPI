@@ -26,7 +26,7 @@ class LolApiApplicationTests {
 	@Test
 		public void createCharacterThenSave(){
 
-			Champion aatrox = new Champion("Aatrox", "The Darkin Blade", "Fighter", "Deathbringer Stance", "The Darkin Blade", "Infernal Chains", "Umbral Dash", "World Ender", 0, 24.384, 0.651, 60.376, 537.8);
+			Champion aatrox = new Champion("Aatrox", "The Darkin Blade", "Fighter", "Deathbringer Stance", "The Darkin Blade", "Infernal Chains", "Umbral Dash", "World Ender");
 			championRepository.save(aatrox);
 		}
 
@@ -70,36 +70,6 @@ class LolApiApplicationTests {
 		public void canFindChampionByAbilityR(){
 			List<Champion> found = championRepository.findByAbilityr("Hero's Entrance");
 			assertEquals("Hero's Entrance", found.get(0).getAbilityr());
-		}
-
-		@Test
-		public void canFindChampionByMana(){
-			List<Champion> found = championRepository.findByMana(475);
-			assertEquals(475, found.get(0).getMana());
-		}
-
-		@Test
-		public void canFindChampionByArmour(){
-			List<Champion> found = championRepository.findByArmour(32);
-			assertEquals(32, found.get(0).getArmour());
-		}
-
-		@Test
-		public void canFindChampionByAttackSpeed(){
-			List<Champion> found = championRepository.findByAttackSpeed(0.658);
-			assertEquals(0.658, found.get(0).getAttackSpeed());
-		}
-
-		@Test
-		public void canFindChampionByAttackDamage(){
-			List<Champion> found = championRepository.findByAttackDamage(66);
-			assertEquals(66, found.get(0).getAttackSpeed());
-		}
-
-		@Test
-		public void canFindChampionByHealth(){
-			List<Champion> found = championRepository.findByHealth(534);
-			assertEquals(534, found.get(0).getHealth());
 		}
 
 }
