@@ -26,8 +26,8 @@ class LolApiApplicationTests {
 	@Test
 		public void createCharacterThenSave(){
 
-			Champion aatrox = new Champion("Aatrox", "The Darkin Blade", "Fighter", "Deathbringer Stance", "The Darkin Blade", "Infernal Chains", "Umbral Dash", "World Ender");
-			championRepository.save(aatrox);
+			Champion evelynn = new Champion("Evelynn", "Agony's Embrace", "Mage", "Demon Shade", "Hate Spike", "Allure", "Whiplash", "Last Caress");
+			championRepository.save(evelynn);
 		}
 
 		@Test
