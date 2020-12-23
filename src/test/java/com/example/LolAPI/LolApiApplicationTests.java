@@ -25,7 +25,6 @@ class LolApiApplicationTests {
 
 	@Test
 		public void createCharacterThenSave(){
-
 			Champion evelynn = new Champion("Evelynn", "Agony's Embrace", "Mage", "Demon Shade", "Hate Spike", "Allure", "Whiplash", "Last Caress");
 			championRepository.save(evelynn);
 		}
