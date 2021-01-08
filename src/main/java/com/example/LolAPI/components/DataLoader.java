@@ -426,6 +426,9 @@ public class DataLoader implements ApplicationRunner {
         Champion viktor = new Champion("Viktor", "The Machine Herald", "Mage", "Glorious Evolution", "Siphon Power", "Gravity Field", "Death Ray", "Chaos Storm");
         championRepository.save(viktor);
 
+        Champion viego = new Champion("Viego", "The Ruined King", "Fighter", "Soverign's Domination", "PlaceholderQ", "PlaceholderW", "PlaceholderE", "PlaceholderR");
+        championRepository.save(viego);
+
         Champion vladimir = new Champion("Vladimir", "The Crimson Reaper", "Tank", "Crimson Pact", "Transfusion", "Sanguine Pool", "Tides of Blood", "Hemoplague");
         championRepository.save(vladimir);
 
