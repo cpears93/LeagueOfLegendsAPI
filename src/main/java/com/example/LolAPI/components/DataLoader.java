@@ -141,6 +141,10 @@ public class DataLoader implements ApplicationRunner {
         Champion irelia = new Champion("Irelia", "The Blade Dancer", "Fighter", "Ionan Fervor", "Bladesurge", "Defiant Dance", "Flawless Duet", "Vanguard's Edge");
         championRepository.save(irelia);
 
+        Champion isolde = new Champion("Isolde", "Placeholder", "Placeholder", "Placeholder", "Placeholder",
+                "Placeholder", "Placeholder", "Placeholder");
+        championRepository.save(isolde);
+
         Champion ivern = new Champion("Ivern", "The Green Father", "Mage", "Friend of the Forest", "Rootcaller", "Brushmaker", "Triggerseed", "Daisy!");
         championRepository.save(ivern);
 
