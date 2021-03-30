@@ -129,6 +129,10 @@ public class DataLoader implements ApplicationRunner {
         Champion graves = new Champion("Graves", "The Outlaw", "Marksman", "New Destiny", "End of The Line", "Smoke Screen", "Quickdraw", "Collateral Damage");
         championRepository.save(graves);
 
+        Champion gwen = new Champion("Gwen", "The Outlaw", "Marksman", "Thousand Cuts", "Snip Snip!",
+                "Hallowed Mist", "Skip 'n Slash", "Needlework");
+        championRepository.save(gwen);
+
         Champion hecarim = new Champion("Hecarim", "The Shadow of War", "Fighter", "Warpath", "Rampage", "Spirit of Dread", "Devastating Charge", "Onslaught of Shadows");
         championRepository.save(hecarim);
 
