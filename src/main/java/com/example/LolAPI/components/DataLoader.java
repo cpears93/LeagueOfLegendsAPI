@@ -27,6 +27,9 @@ public class DataLoader implements ApplicationRunner {
         Champion akali = new Champion("Akali", "The Rogue Assassin", "Assassin", "Assassin's Mark", "Five Point Strike", "Twilight Shroud", "Shuriken Flip", "Perfect Execution");
         championRepository.save(akali);
 
+        Champion akshan = new Champion("Akshan", "x", "Assassin", "Dirty Fighting", "Avenging", "Going Rogue", "Heroic Swing", "Comeuppance");
+        championRepository.save(akshan);
+
         Champion alistar = new Champion("Alistar", "The Minotaur", "Tank", "Triumphant Roar", "Pulverize", "Headbutt", "Trample", "Unbreakable Will");
         championRepository.save(alistar);
 
