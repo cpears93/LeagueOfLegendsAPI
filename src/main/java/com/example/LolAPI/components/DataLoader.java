@@ -27,7 +27,7 @@ public class DataLoader implements ApplicationRunner {
         Champion akali = new Champion("Akali", "The Rogue Assassin", "Assassin", "Assassin's Mark", "Five Point Strike", "Twilight Shroud", "Shuriken Flip", "Perfect Execution");
         championRepository.save(akali);
 
-        Champion akshan = new Champion("Akshan", "x", "Assassin", "Dirty Fighting", "Avenging", "Going Rogue", "Heroic Swing", "Comeuppance");
+        Champion akshan = new Champion("Akshan", "The Rougue Sentinal", "Assassin", "Dirty Fighting", "Avenging", "Going Rogue", "Heroic Swing", "Comeuppance");
         championRepository.save(akshan);
 
         Champion alistar = new Champion("Alistar", "The Minotaur", "Tank", "Triumphant Roar", "Pulverize", "Headbutt", "Trample", "Unbreakable Will");
@@ -132,8 +132,7 @@ public class DataLoader implements ApplicationRunner {
         Champion graves = new Champion("Graves", "The Outlaw", "Marksman", "New Destiny", "End of The Line", "Smoke Screen", "Quickdraw", "Collateral Damage");
         championRepository.save(graves);
 
-        Champion gwen = new Champion("Gwen", "The Outlaw", "Marksman", "Thousand Cuts", "Snip Snip!",
-                "Hallowed Mist", "Skip 'n Slash", "Needlework");
+        Champion gwen = new Champion("Gwen", "The Outlaw", "Marksman", "Thousand Cuts", "Snip Snip!", "Hallowed Mist", "Skip 'n Slash", "Needlework");
         championRepository.save(gwen);
 
         Champion hecarim = new Champion("Hecarim", "The Shadow of War", "Fighter", "Warpath", "Rampage", "Spirit of Dread", "Devastating Charge", "Onslaught of Shadows");
@@ -429,6 +428,9 @@ public class DataLoader implements ApplicationRunner {
 
         Champion velkoz = new Champion("Vel'Koz", "The Eye of The Void", "Mage", "Organic Deconstruction", "Plasma Fission", "Void Rift", "Tectonic Disruption", "Lifeform Disintegration Ray");
         championRepository.save(velkoz);
+
+        Champion vex = new Champion("Vex", "The Gloomist", "Mage", "Doom 'n Gloom", "Mistral Bolt", "Personal Space", "Looming Darkness", "Shadow Surge");
+        championRepository.save(vex);
 
         Champion vi = new Champion("Vi", "The Piltover Enforcer", "Fighter", "Blast Shield", "Vault Breaker", "Denting Blows", "Excessive Force", "Assault and Battery");
         championRepository.save(vi);
